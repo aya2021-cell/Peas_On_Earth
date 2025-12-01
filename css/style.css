@@ -1,31 +1,100 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
+/* Professional, minimalist styling for Peas On Earth */
+
+/* --- Global Resets --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f7f7f7;
+  color: #222;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+.page-wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* --- Navigation Bar --- */
+.topnav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e2e2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 20px;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topnav a {
+  color: #333;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.topnav a:hover {
+  background-color: #e8f4e5;
+  color: #245c2a;
+}
+
+.topnav a.active {
+  background-color: #3b7a3f;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:last-child) {
+    display: none;
   }
-  
-  nav {
+  .topnav a.icon {
+    display: block;
     position: absolute;
-    z-index: 10;
-    background: white;
-    padding: 8px 12px;
-    margin: 12px;
-    border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    right: 15px;
+    top: 14px;
   }
-  
-  nav a {
-    text-decoration: none;
-    margin-right: 10px;
-    font-size: 14px;
-    color: #333;
+  .topnav.responsive {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  #map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
+  .topnav.responsive a {
+    display: block;
     width: 100%;
   }
-  
+}
+
+/* --- Page Content --- */
+.content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+.content strong {
+  color: #245c2a;
+  font-weight: 600;
+}
+
+.content img {
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
